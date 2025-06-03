@@ -15,8 +15,17 @@ function average(array) {
     return sum / array.length;
 };
 
+// 5
+function isPalindrome(string) {
+    const lowercaseString = string.toLowerCase();
+    const revString = lowercaseString.split("").reverse().join("");
+
+    return lowercaseString === revString;
+};
+
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 };
