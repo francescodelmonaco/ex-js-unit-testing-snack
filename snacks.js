@@ -6,6 +6,10 @@ function getInitials(fullName) {
 
 // 2 // 4
 function createSlug(string) {
+    if (!string) {
+        throw new Error("Titolo non valido");
+    };
+
     return string.toLowerCase().replaceAll(" ", "-");
 };
 
@@ -17,7 +21,7 @@ function average(array) {
 
 // 5
 function isPalindrome(string) {
-    const lowercaseString = string.toLowerCase();
+    const lowercaseString = string.trim().toLowerCase();
     const revString = lowercaseString.split("").reverse().join("");
 
     return lowercaseString === revString;
